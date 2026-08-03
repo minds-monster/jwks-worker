@@ -1,0 +1,7 @@
+name = "my-jwks-worker"
+main = "src/index.js"
+compatibility_date = "2024-08-01"
+
+# These will be overridden by environment variables in the dashboard
+[vars]
+PARTNER_ID = "3dd91077-c6db-4cb6-9f8d-1d603b85f8ee"
