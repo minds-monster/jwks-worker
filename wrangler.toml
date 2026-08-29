@@ -2,6 +2,21 @@ name = "my-jwks-worker"
 main = "src/index.js"
 compatibility_date = "2024-08-01"
 
-# These will be overridden by environment variables in the dashboard
+# Public key material only. These may be overridden by environment variables in
+# the dashboard; the private key that signs partner JWTs must stay out of here.
 [vars]
-PARTNER_ID = "3dd91077-c6db-4cb6-9f8d-1d603b85f8ee"
+PARTNER_ID = "d4d4049f-3321-4e6a-8f87-fc3b52008bc9"
+
+ISSUER_JWKS = '{"keys":[{"kid":"b49b6217-e54a-4557-980e-2ac494629114","kty":"EC","crv":"P-256","alg":"ES256","use":"sig","x":"suBinUJqU9hjCoIMF7F579EGx3OTsk-GAesSqFRkz8s","y":"-SZgaZP30CDN6aLicGe4GeGlVozHyNuPcqSIG5MO5Jw"}]}'
+
+PARTNER_PUBLIC_KEY = """
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxdumimFMp5YJ2a2UXUSi
+gKO89OtwkT4NYF8GphAh0Fk+WmlfGeQPC7UUnvLLs3P4qI+giUViZfNnPbbT7L7L
+9ExMnuG7zpnc/Q2DqVA/TPNELWi1xG8YPM8/iEkFKX02U54ChP4I64AMZ9LVqwXg
+dDxnFRUWvzXvkjaFaYiDB3tFrPmjSATM4hoe6IggkcYHUPejWrFTukNeJBA8jrrR
+RtCYVbE/LtjKbZoYe1o4zNdscDOA4jFZcI1LhBVL5BSVDCh0kmpQeNju+x31s6BK
+4UwGWpzfGZ/NWE0lpjl9v56q0G0f5VOrEcFaOHW0RTVJuQbaH2ae7FjDcDpHGF66
+5wIDAQAB
+-----END PUBLIC KEY-----
+"""
